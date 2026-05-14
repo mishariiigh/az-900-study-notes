@@ -29,7 +29,7 @@ Cloud computing is the delivery of computing services over the internet, includi
 #### Responsibility Model
 With Azure IaaS, Microsoft manages the physical data center, servers, and networking hardware. users are responsible for configuring, patching and maintaining the operationg system, middleware, and application software running on those machines.
 
-#### PaaS (Platform as a Service)
+### PaaS (Platform as a Service)
 - Provides platform to deploy apps without managing infrastructure
 - Azure Platform as a service (PaaS) offersa fully managed enviroment for building, testing, and deploying applications without managing underlying servers, storage or networking. Ket services include Azure App service, Azure SQL, and Azure Functions which provide automatic scaling, patching, and built-in integration for CI/CD, allowing developers to focus solely on code
 
