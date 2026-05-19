@@ -198,7 +198,7 @@ more to read to understand basic building blocks and principles (<a href="https:
 #### Key Infrastructure Componenets
 * Global Regions: Azure regions represents sets of datacenters deployed within a latency-defined perimeter. They ensure data residency and compliance, and are interconnected by Microsoft's dedicated low-latency global network rather than the public internet.
 
-*Edge Locations (PoPs): Points-of-presence are entry points to Microsoft's global network, strategiaclly placed  to bring cloud resources closer to users and enterprise branch offices.
+* Edge Locations (PoPs): Points-of-presence are entry points to Microsoft's global network, strategiaclly placed  to bring cloud resources closer to users and enterprise branch offices.
 
 #### ExpressRoutes Global Reach
 - <b> ExpressRoute Global Reach </b> is a specific Azure Networking service designed to link you on-premises network together via the Microsoft global backbone, supplementing your existing Wide Area Network (WAN).
