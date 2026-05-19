@@ -136,6 +136,36 @@ These defines the division of responsibility for managing  technology:
 - Scaling vs. Elasticity: <b>Scalability</b> is the ability to handle increased load; <b>elasticity</b> is the ability to automatically handle that increase in real-time.
 - Scale up vs Scale out: Microsoft Azure clarifies that Scalling up adds resources to an existing server, while scalling out adds more servers.
 
-- High availability
+
+### High availability
+- High Availibility (HA) In Microsoft Azure ensures your applications and data remain continuously accessible despite component failures of schdueled maintenance. Azure achieves this by offering a global infrastructure with redundant hardware, autmated failover, and geographically distributed resources.
+
+#### 1. Azure Global infrastructure & Redundancy
+- At the core of Azure's high availibility are its  deplotment architectures:
+
+* Availibility Zones (AZs): Physically separated locations within an Azure region, each equipped with independent power, cooling, and networking. deploying multi-tiered applications across AZs protects you from localized datacenter failures.
+
+* Regain Pairs: Azure Pairs regions within same geograph (eg. Canada Central and Canada East) to provide reliable disaster recovery  by automatically replicating underlying storage and services.
+
+#### 2. Built-in Compute & Storage Reliability
+* Availibility Sets: For older or specific Virtual Machine (VM) deployments, availibility sets spread VMs accorss different fault domain (separate hardware racks/power sources) and update domains (separate schdueled maintenance windows) to gurantee a 99.5% uptime SLA.
+
+* Managed Disks: Azure Managed Disks automatically replicate data three times within a single region, providing 99.99999% durability and protecting againste drive or node failures.
+
+#### 3. Service-Specific HA Mechanisms
+- Azure natively supports automated failover and replica distruption for PaaS (Platform as a Service) offering :
+* Databases: Services like Azure SQL Database, PostgreSQL, and MySQL deploy standby replicas. They use zone-redundant or local-redundant high availibility to ensure transactions continue even if a replica fails.
+
+* Gloabal Load Balancing: Tools such as Azure Load Balancer, Azure Application Gateway, and Azure Front Door help route traffic away from unhealthy or unreachable resources, guranteeing a seamless user experience.
+
+#### 4. SLA Guarantees 
+- Micorsoft gurantees varying Service Level Agreements (SLAs) based on your architechture:
+* Single VM (Premium Storage): 99.9%
+* Multiple VMs in an Availibility set: 99.95%
+* Multiple VMs across Availivility Zones: 99.9%
+
+#### Practical Next Steps:
+To build highly availible architechture, it is curcial to understand the foundational stategies and checklists for maintaining resiliant systems. 
+more to read to understand basic building blocks and principles (<a href="https://blobeater.blog/2022/05/31/azure-high-availability/">Azure High Availibility</a>)
 - Cost efficiency
 - Global reach
