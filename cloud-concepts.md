@@ -191,4 +191,27 @@ more to read to understand basic building blocks and principles (<a href="https:
 * Workload Isolation: Distinguish between production and non-production enviroments, pre-production enviroments rarely need production-level resiliance, logging, or scale, and can  use cheaper VM SKUs.
 * Cost Guardrails: Apply Azure Policies and resource group budgets to prevent unapproved or incidental charges from occuring in the first place.
 
-- Global reach
+### Global reach
+
+- Azure's global reach is powered by a massive private network backbone spanning over 275,000 miles of lit fiber-optic and undersea cables. It links 60+ regional datacenters and over 190 points-of-presence (PoPs) worldwide, allowing businesses to deploy resources with minimal latency and high bandwidth.
+
+#### Key Infrastructure Componenets
+* Global Regions: Azure regions represents sets of datacenters deployed within a latency-defined perimeter. They ensure data residency and compliance, and are interconnected by Microsoft's dedicated low-latency global network rather than the public internet.
+
+*Edge Locations (PoPs): Points-of-presence are entry points to Microsoft's global network, strategiaclly placed  to bring cloud resources closer to users and enterprise branch offices.
+
+#### ExpressRoutes Global Reach
+- <b> ExpressRoute Global Reach </b> is a specific Azure Networking service designed to link you on-premises network together via the Microsoft global backbone, supplementing your existing Wide Area Network (WAN).
+
+* On-Premises to On-Premises: Instead of routing cross-branch traffic over the public internet or complex carrier network, you can bridge distinct ExpressRoute circuite to allow two local data centers (e.g., California and Texas) to communicate privately.
+
+* Uses Cases: It is ideal for bridging gaps where a primary service provider does not operate globally, or as high-speed backup for your primary enterprise WAN.
+
+* Routing: BGP Routes are automatically propagated between your on-premises sites through the Microsoft network.
+
+#### Pricing & Tier
+* Same Geopolitical Regions: If you are connecting ExpressRoute circuits that are located in the same geopolitical region, no additional premium routing fees are required.
+
+* Different Geopolitical Regions: If you need to link circuits in different geopolitical regions (e.g, North America and Europe), you will need the ExpressRoute Premium SKU for both circuits to enable cross-boarder connectivity.
+
+- more to learn in <a href="https://learn.microsoft.com/en-us/azure/expressroute/expressroute-global-reach">Microsoft Learn About ExpressRoute Global Reach </a>
