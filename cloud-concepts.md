@@ -167,5 +167,28 @@ These defines the division of responsibility for managing  technology:
 #### Practical Next Steps:
 To build highly availible architechture, it is curcial to understand the foundational stategies and checklists for maintaining resiliant systems. 
 more to read to understand basic building blocks and principles (<a href="https://blobeater.blog/2022/05/31/azure-high-availability/">Azure High Availibility</a>)
-- Cost efficiency
+### Cost efficiency
+
+- Azure cost effciency is a continuos process of aligning cloud spend with business value. It leverages consumption-based pricing, advanced discounts, and built-in management tools to eliminate waste and maximize your return on investment.
+
+#### 1. Core Pricing Models.
+* Pay-as-you-go: Billed for exact usage (per second, minute, or gigbytes) with no up-front commitments.
+* Azure Reservations: Pre-commit to 1- or 3-year usage for stable workloads to save up to 72%.
+* Azure Service Plan: A flexible pay-as-you-go commitment across compute service to save up to 65%.
+* Azure Hybrid Benefit: Use on-premises Winsows Server SQL, SQL Server, or Linux subscriptions with active Software Assurance to heavily discount Azure VMs and SQL databases.
+
+#### 2. Built-in Cost Optimization Tools
+* Azure Cost Management + Bilings: Track resources usage, identifiy cost drivers, set budgets, and generate alerts when spending approaches limits.
+* Azure Advisor: Analyzes your configurations and provide personlaized recommendations for high-usage resources, right-sizing(downgrading oversized VMs) and leveraging idle resources.
+
+#### 3. Actionable Best Practices
+* Right-sizing: Review metrics and downgrade Virtual Machines (VMs) or databses that are consistently underutilized.
+* Auto-scaling: Utilize VM Scale Sets and serverless fucntions (like Azure Functions) to automatically provision capacity during demand spikes and scale down during off-hours.
+* Resources Schdueling: Implement automated scripts or policies to shut down non-production (e.g, Development/Testing) enviroments at night and over weekends.
+* Data Tiering: Move inactive or older data from expensive hot storage to cooler Azure Blob Stroage or Archive tiers.
+
+#### 4. Strategic Cloud Design
+* Workload Isolation: Distinguish between production and non-production enviroments, pre-production enviroments rarely need production-level resiliance, logging, or scale, and can  use cheaper VM SKUs.
+* Cost Guardrails: Apply Azure Policies and resource group budgets to prevent unapproved or incidental charges from occuring in the first place.
+
 - Global reach
